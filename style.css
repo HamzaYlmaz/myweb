@@ -1109,6 +1109,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .container {
@@ -1118,42 +1119,47 @@ body {
     padding: 20px;
 }
 
+/* Öğe ayarları */
 .item {
-    width: 30%;
+    width: 100%; /* Başlangıçta tüm genişliği kaplar */
+    max-width: 300px; /* Maksimum genişliği sınırla */
     margin: 10px;
     background-color: #f4f4f4;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-sizing: border-box; /* Padding ve border'ı genişliğe dahil et */
 }
 
 /* Responsive ayarlar */
-@media (max-width: 600px) {
+@media (min-width: 601px) {
     .item {
-        width: 100%;
+        width: calc(50% - 20px); /* İki öğe yan yana olacak şekilde */
     }
 }
 
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 1024px) {
     .item {
-        width: 45%;
+        width: calc(33.33% - 20px); /* Üç öğe yan yana olacak şekilde */
     }
 }
 
-@media (min-width: 1025px) {
-    .item {
-        width: 30%;
-    }
-}
 img {
     max-width: 100%;
     height: auto;
 }
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
 h1 {
     font-size: 2em;
 }
+
 p {
     font-size: 1em;
 }
 
-   
               
