@@ -1119,7 +1119,6 @@ body {
     padding: 20px;
 }
 
-/* Öğe ayarları */
 .item {
     width: 100%; /* Başlangıçta tüm genişliği kaplar */
     max-width: 300px; /* Maksimum genişliği sınırla */
